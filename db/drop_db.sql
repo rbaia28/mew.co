@@ -1,0 +1,1 @@
+DROP DATABASE mew_co;
