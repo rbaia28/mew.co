@@ -1,6 +1,6 @@
 <?php
 
-class Trainer
+class Trainer extends User
 {
 	private int $uuid;
 	private int $trainer_name;
@@ -13,18 +13,19 @@ class Trainer
 	private string $region;
 	private string $country;
 
-	private function __construct(int $uuid, string $trainer_name, string $friend_code, int $team_id, string $contact_method, int $level, string $municipality, string $postal_code, string $region, string $country)
+	private function __construct(User $user, int $uuid, string $trainer_name, string $friend_code, int $team_id, string $contact_method, int $level, string $municipality, string $postal_code, string $region, string $country)
 	{
-		$this->uuid =  $uuid;
-		$this->trainer_name =  $trainer_name;
-		$this->friend_code =  $friend_code;
-		$this->team_id =  $team_id;
+		// create user object
+		$this->uuid = $user->id;
+		$this->trainer_name = $trainer_name;
+		$this->friend_code = $friend_code;
+		$this->team_id = $team_id;
 		$this->contact_method = $contact_method;
-		$this->level =  $level;
-		$this->municipality =  $municipality;
-		$this->postal_code =  $postal_code;
-		$this->region =  $region;
-		$this->country =  $country;
+		$this->level = $level;
+		$this->municipality = $municipality;
+		$this->postal_code = $postal_code;
+		$this->region = $region;
+		$this->country = $country;
 	}
 
 	/**
@@ -35,6 +36,7 @@ class Trainer
 	public function fromArray(array $trainer)
 	{
 		$this->__construct(
+			$trainer['user'],
 			$trainer['uuid'],
 			$trainer['trainer_name'],
 			$trainer['friend_code'],
