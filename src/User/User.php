@@ -6,13 +6,15 @@ class User
 	protected string $lastName;
 	protected string $email;
 	protected string $password;
+	protected string $role;
 
-	public function __construct(string $firstName, string $lastName, string $email, string $password)
+	public function __construct(string $firstName, string $lastName, string $email, string $password, string $role = 'user')
 	{
 		$this->firstName = $firstName;
 		$this->lastName = $lastName;
 		$this->email = $email;
 		$this->password = $password;
+		$this->role = $role;
 	}
 
 	/**
@@ -99,6 +101,26 @@ class User
 	public function setPassword($password)
 	{
 		$this->password = $password;
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of role
+	 */ 
+	public function getRole()
+	{
+		return $this->role;
+	}
+
+	/**
+	 * Set the value of role
+	 *
+	 * @return  self
+	 */ 
+	public function setRole($role)
+	{
+		$this->role = $role;
 
 		return $this;
 	}

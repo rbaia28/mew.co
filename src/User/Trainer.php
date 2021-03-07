@@ -13,10 +13,11 @@ class Trainer extends User
 	private string $region;
 	private string $country;
 
-	private function __construct(User $user, int $uuid, string $trainer_name, string $friend_code, int $team_id, string $contact_method, int $level, string $municipality, string $postal_code, string $region, string $country)
+	private function __construct(string $firstName, string $lastName, string $email, string $password, string $trainer_name, string $friend_code, int $team_id, string $contact_method, int $level, string $municipality, string $postal_code, string $region, string $country)
 	{
 		// create user object
-		$this->uuid = $user->id;
+		parent::__construct($firstName, $lastName, $email, $password, 'trainer');
+		$this->uuid = $this->id;
 		$this->trainer_name = $trainer_name;
 		$this->friend_code = $friend_code;
 		$this->team_id = $team_id;
@@ -36,7 +37,10 @@ class Trainer extends User
 	public function fromArray(array $trainer)
 	{
 		$this->__construct(
-			$trainer['user'],
+			$trainer['firstName'],
+			$trainer['lastName'],
+			$trainer['email'],
+			$trainer['password'],
 			$trainer['uuid'],
 			$trainer['trainer_name'],
 			$trainer['friend_code'],
