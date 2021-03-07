@@ -13,11 +13,44 @@ class Trainer
 	private string $region;
 	private string $country;
 
-	
+	private function __construct(int $uuid, string $trainer_name, string $friend_code, int $team_id, string $contact_method, int $level, string $municipality, string $postal_code, string $region, string $country)
+	{
+		$this->uuid =  $uuid;
+		$this->trainer_name =  $trainer_name;
+		$this->friend_code =  $friend_code;
+		$this->team_id =  $team_id;
+		$this->contact_method = $contact_method;
+		$this->level =  $level;
+		$this->municipality =  $municipality;
+		$this->postal_code =  $postal_code;
+		$this->region =  $region;
+		$this->country =  $country;
+	}
+
+	/**
+	 * Construct trainer from associative array
+	 *
+	 * @return Trainer
+	 */
+	public function fromArray(array $trainer)
+	{
+		$this->__construct(
+			$trainer['uuid'],
+			$trainer['trainer_name'],
+			$trainer['friend_code'],
+			$trainer['team_id'],
+			$trainer['contact_method'],
+			$trainer['level'],
+			$trainer['municipality'],
+			$trainer['postal_code'],
+			$trainer['region'],
+			$trainer['country']
+		);
+	}
 
 	/**
 	 * Get the value of uuid
-	 */ 
+	 */
 	public function getUuid()
 	{
 		return $this->uuid;
@@ -25,7 +58,7 @@ class Trainer
 
 	/**
 	 * Get the value of trainer_name
-	 */ 
+	 */
 	public function getTrainer_name()
 	{
 		return $this->trainer_name;
@@ -35,7 +68,7 @@ class Trainer
 	 * Set the value of trainer_name
 	 *
 	 * @return  self
-	 */ 
+	 */
 	public function setTrainer_name($trainer_name)
 	{
 		$this->trainer_name = $trainer_name;
@@ -45,7 +78,7 @@ class Trainer
 
 	/**
 	 * Get the value of friend_code
-	 */ 
+	 */
 	public function getFriend_code()
 	{
 		return $this->friend_code;
@@ -55,7 +88,7 @@ class Trainer
 	 * Set the value of friend_code
 	 *
 	 * @return  self
-	 */ 
+	 */
 	public function setFriend_code($friend_code)
 	{
 		$this->friend_code = $friend_code;
@@ -65,7 +98,7 @@ class Trainer
 
 	/**
 	 * Get the value of team_id
-	 */ 
+	 */
 	public function getTeam_id()
 	{
 		return $this->team_id;
@@ -75,7 +108,7 @@ class Trainer
 	 * Set the value of team_id
 	 *
 	 * @return  self
-	 */ 
+	 */
 	public function setTeam_id($team_id)
 	{
 		$this->team_id = $team_id;
@@ -85,7 +118,7 @@ class Trainer
 
 	/**
 	 * Get the value of contact_method
-	 */ 
+	 */
 	public function getContact_method()
 	{
 		return $this->contact_method;
@@ -95,7 +128,7 @@ class Trainer
 	 * Set the value of contact_method
 	 *
 	 * @return  self
-	 */ 
+	 */
 	public function setContact_method($contact_method)
 	{
 		$this->contact_method = $contact_method;
@@ -105,7 +138,7 @@ class Trainer
 
 	/**
 	 * Get the value of level
-	 */ 
+	 */
 	public function getLevel()
 	{
 		return $this->level;
@@ -115,7 +148,7 @@ class Trainer
 	 * Set the value of level
 	 *
 	 * @return  self
-	 */ 
+	 */
 	public function setLevel($level)
 	{
 		$this->level = $level;
@@ -125,7 +158,7 @@ class Trainer
 
 	/**
 	 * Get the value of municipality
-	 */ 
+	 */
 	public function getMunicipality()
 	{
 		return $this->municipality;
@@ -135,7 +168,7 @@ class Trainer
 	 * Set the value of municipality
 	 *
 	 * @return  self
-	 */ 
+	 */
 	public function setMunicipality($municipality)
 	{
 		$this->municipality = $municipality;
@@ -145,7 +178,7 @@ class Trainer
 
 	/**
 	 * Get the value of postal_code
-	 */ 
+	 */
 	public function getPostal_code()
 	{
 		return $this->postal_code;
@@ -155,7 +188,7 @@ class Trainer
 	 * Set the value of postal_code
 	 *
 	 * @return  self
-	 */ 
+	 */
 	public function setPostal_code($postal_code)
 	{
 		$this->postal_code = $postal_code;
@@ -165,7 +198,7 @@ class Trainer
 
 	/**
 	 * Get the value of region
-	 */ 
+	 */
 	public function getRegion()
 	{
 		return $this->region;
@@ -175,7 +208,7 @@ class Trainer
 	 * Set the value of region
 	 *
 	 * @return  self
-	 */ 
+	 */
 	public function setRegion($region)
 	{
 		$this->region = $region;
@@ -185,7 +218,7 @@ class Trainer
 
 	/**
 	 * Get the value of country
-	 */ 
+	 */
 	public function getCountry()
 	{
 		return $this->country;
@@ -195,7 +228,7 @@ class Trainer
 	 * Set the value of country
 	 *
 	 * @return  self
-	 */ 
+	 */
 	public function setCountry($country)
 	{
 		$this->country = $country;
