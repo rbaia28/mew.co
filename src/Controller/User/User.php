@@ -1,130 +1,130 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\User;
 
 class User
 {
-	protected int $id;
-	protected string $firstName;
-	protected string $lastName;
-	protected string $email;
-	protected string $password;
-	protected string $role;
+	// protected int $id;
+	// protected string $firstName;
+	// protected string $lastName;
+	// protected string $email;
+	// protected string $password;
+	// protected string $role;
 
-	public function __construct(string $firstName, string $lastName, string $email, string $password, string $role = 'user')
-	{
-		$this->firstName = $firstName;
-		$this->lastName = $lastName;
-		$this->email = $email;
-		$this->password = $password;
-		$this->role = $role;
-	}
+	// public function __construct(string $firstName, string $lastName, string $email, string $password, string $role = 'user')
+	// {
+	// 	$this->firstName = $firstName;
+	// 	$this->lastName = $lastName;
+	// 	$this->email = $email;
+	// 	$this->password = $password;
+	// 	$this->role = $role;
+	// }
 
-	/**
-	 * Get the value of id
-	 */ 
-	public function getId()
-	{
-		return $this->id;
-	}
+	// /**
+	//  * Get the value of id
+	//  */ 
+	// public function getId()
+	// {
+	// 	return $this->id;
+	// }
 
-	/**
-	 * Get the value of firstName
-	 */ 
-	public function getFirstName()
-	{
-		return $this->firstName;
-	}
+	// /**
+	//  * Get the value of firstName
+	//  */ 
+	// public function getFirstName()
+	// {
+	// 	return $this->firstName;
+	// }
 
-	/**
-	 * Set the value of firstName
-	 *
-	 * @return  self
-	 */ 
-	public function setFirstName($firstName)
-	{
-		$this->firstName = $firstName;
+	// /**
+	//  * Set the value of firstName
+	//  *
+	//  * @return  self
+	//  */ 
+	// public function setFirstName($firstName)
+	// {
+	// 	$this->firstName = $firstName;
 
-		return $this;
-	}
+	// 	return $this;
+	// }
 
-	/**
-	 * Get the value of lastName
-	 */ 
-	public function getLastName()
-	{
-		return $this->lastName;
-	}
+	// /**
+	//  * Get the value of lastName
+	//  */ 
+	// public function getLastName()
+	// {
+	// 	return $this->lastName;
+	// }
 
-	/**
-	 * Set the value of lastName
-	 *
-	 * @return  self
-	 */ 
-	public function setLastName($lastName)
-	{
-		$this->lastName = $lastName;
+	// /**
+	//  * Set the value of lastName
+	//  *
+	//  * @return  self
+	//  */ 
+	// public function setLastName($lastName)
+	// {
+	// 	$this->lastName = $lastName;
 
-		return $this;
-	}
+	// 	return $this;
+	// }
 
-	/**
-	 * Get the value of email
-	 */ 
-	public function getEmail()
-	{
-		return $this->email;
-	}
+	// /**
+	//  * Get the value of email
+	//  */ 
+	// public function getEmail()
+	// {
+	// 	return $this->email;
+	// }
 
-	/**
-	 * Set the value of email
-	 *
-	 * @return  self
-	 */ 
-	public function setEmail($email)
-	{
-		$this->email = $email;
+	// /**
+	//  * Set the value of email
+	//  *
+	//  * @return  self
+	//  */ 
+	// public function setEmail($email)
+	// {
+	// 	$this->email = $email;
 
-		return $this;
-	}
+	// 	return $this;
+	// }
 
-	/**
-	 * Get the value of password
-	 */ 
-	public function getPassword()
-	{
-		return $this->password;
-	}
+	// /**
+	//  * Get the value of password
+	//  */ 
+	// public function getPassword()
+	// {
+	// 	return $this->password;
+	// }
 
-	/**
-	 * Set the value of password
-	 *
-	 * @return  self
-	 */ 
-	public function setPassword($password)
-	{
-		$this->password = $password;
+	// /**
+	//  * Set the value of password
+	//  *
+	//  * @return  self
+	//  */ 
+	// public function setPassword($password)
+	// {
+	// 	$this->password = $password;
 
-		return $this;
-	}
+	// 	return $this;
+	// }
 
-	/**
-	 * Get the value of role
-	 */ 
-	public function getRole()
-	{
-		return $this->role;
-	}
+	// /**
+	//  * Get the value of role
+	//  */ 
+	// public function getRole()
+	// {
+	// 	return $this->role;
+	// }
 
-	/**
-	 * Set the value of role
-	 *
-	 * @return  self
-	 */ 
-	public function setRole($role)
-	{
-		$this->role = $role;
+	// /**
+	//  * Set the value of role
+	//  *
+	//  * @return  self
+	//  */ 
+	// public function setRole($role)
+	// {
+	// 	$this->role = $role;
 
-		return $this;
-	}
+	// 	return $this;
+	// }
 }
