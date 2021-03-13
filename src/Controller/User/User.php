@@ -2,15 +2,10 @@
 
 namespace App\Controller\User;
 
-class User
-{
-	// protected int $id;
-	// protected string $firstName;
-	// protected string $lastName;
-	// protected string $email;
-	// protected string $password;
-	// protected string $role;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+class User extends AbstractController
+{
 	// public function __construct(string $firstName, string $lastName, string $email, string $password, string $role = 'user')
 	// {
 	// 	$this->firstName = $firstName;
