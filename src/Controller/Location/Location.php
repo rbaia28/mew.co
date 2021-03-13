@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Controller;
+
 class Location
 {
 	private int $id;

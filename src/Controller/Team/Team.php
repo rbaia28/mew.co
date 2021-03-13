@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Controller;
+
 abstract class Team {
 	protected int $id;
 	protected string $name;

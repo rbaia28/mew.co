@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Controller;
+
 class Trainer extends User
 {
 	private int $uuid;

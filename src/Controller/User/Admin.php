@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Controller;
+
 class Admin extends User {
 	public function __construct($firstName, $lastName, $email, $password)
 	{
