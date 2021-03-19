@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller\Trade;
+// namespace App\Controller\Trade;
 
-class Trade
-{
-	// private int $id;	
-}
+// class Trade
+// {
+// 	// private int $id;	
+// }

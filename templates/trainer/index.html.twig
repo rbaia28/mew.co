@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Trainer index{% endblock %}
+
+{% block body %}
+    <h1>Trainer index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Uuid</th>
+                <th>TrainerName</th>
+                <th>FriendCode</th>
+                <th>TeamId</th>
+                <th>ContactMethod</th>
+                <th>Level</th>
+                <th>LocationId</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for trainer in trainers %}
+            <tr>
+                <td>{{ trainer.uuid }}</td>
+                <td>{{ trainer.trainerName }}</td>
+                <td>{{ trainer.friendCode }}</td>
+                <td>{{ trainer.teamId }}</td>
+                <td>{{ trainer.contactMethod }}</td>
+                <td>{{ trainer.level }}</td>
+                <td>{{ trainer.locationId }}</td>
+                <td>
+                    <a href="{{ path('trainer_show', {'uuid': trainer.uuid}) }}">show</a>
+                    <a href="{{ path('trainer_edit', {'uuid': trainer.uuid}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('trainer_new') }}">Create new</a>
+{% endblock %}
