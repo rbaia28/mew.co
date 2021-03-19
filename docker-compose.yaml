@@ -5,7 +5,7 @@ services:
         image: 'mysql:8.0'
         environment:
             MYSQL_ROOT_PASSWORD: password
-            # MYSQL_DATABASE: mew_co
+            MYSQL_DATABASE: mew_co
         ports:
             # To allow the host machine to access the ports below, modify the lines below.
             # For example, to allow the host to connect to port 3306 on the container, you would change
