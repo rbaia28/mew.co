@@ -24,7 +24,7 @@ class Pokemon
     /**
      * @var int
      *
-     * @ORM\Column(name="uuid", type="integer", nullable=false)
+     * @ORM\Column(name="uuid", type="string", nullable=false)
      */
     private $uuid;
 
@@ -47,7 +47,7 @@ class Pokemon
      *
      * @ORM\Column(name="is_shiny", type="boolean", nullable=false)
      */
-    private $isShiny = '0';
+    private $isShiny = false;
 
     /**
      * @var int
@@ -82,7 +82,7 @@ class Pokemon
      *
      * @ORM\Column(name="is_archived", type="boolean", nullable=false)
      */
-    private $isArchived = '0';
+    private $isArchived = false;
 
 
 
@@ -109,11 +109,11 @@ class Pokemon
     /**
      * Set the value of uuid
      *
-     * @param  int  $uuid
+     * @param  string  $uuid
      *
      * @return  self
      */ 
-    public function setUuid(int $uuid)
+    public function setUuid(string $uuid)
     {
         $this->uuid = $uuid;
 
