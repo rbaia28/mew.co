@@ -4,7 +4,7 @@ Poke Phone Book and community enabler.
 
 [Trello](https://trello.com/b/bkAN1zJd/project-mew)
 
-Before you being please make sure you have [composer installed](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos). I prefer a [global](https://getcomposer.org/doc/00-intro.md#globally) installation but thats just me. If you want it installed on a [per project](https://getcomposer.org/doc/00-intro.md#locally) basis feel free.
+Before you begin please make sure you have [composer installed](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos). I prefer a [global](https://getcomposer.org/doc/00-intro.md#globally) installation but thats just me. If you want it installed on a [per project](https://getcomposer.org/doc/00-intro.md#locally) basis feel free.
 
 You will also need [docker installed](https://docs.docker.com/get-docker/)
 
