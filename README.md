@@ -14,4 +14,4 @@ From the root of the project (ie the mew_co directory) run the following command
 2. run `curl -sS https://get.symfony.com/cli/installer | bash` to get symfony cli installed (follow the directions on globally installing)
 3. start docker mysql image with `docker-compose up -d`
 4. then start the local symfony server by running `symfony serve -d`
-5. run `symfony doctrine:migrations:migrate` to make sure db is up to date (**NOTE**: there may be a delay while mysql get running so if this fails at first, try again in a few min)
+5. run `bin/console doctrine:migrations:migrate` to make sure db is up to date (**NOTE**: there may be a delay while mysql get running so if this fails at first, try again in a few min)
