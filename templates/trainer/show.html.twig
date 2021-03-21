@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Trainer{% endblock %}
+
+{% block body %}
+    <h1>Trainer</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Uuid</th>
+                <td>{{ trainer.uuid }}</td>
+            </tr>
+            <tr>
+                <th>TrainerName</th>
+                <td>{{ trainer.trainerName }}</td>
+            </tr>
+            <tr>
+                <th>FriendCode</th>
+                <td>{{ trainer.friendCode }}</td>
+            </tr>
+            <tr>
+                <th>TeamId</th>
+                <td>{{ trainer.teamId }}</td>
+            </tr>
+            <tr>
+                <th>ContactMethod</th>
+                <td>{{ trainer.contactMethod }}</td>
+            </tr>
+            <tr>
+                <th>Level</th>
+                <td>{{ trainer.level }}</td>
+            </tr>
+            <tr>
+                <th>LocationId</th>
+                <td>{{ trainer.locationId }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('trainer_index') }}">back to list</a>
+
+    <a href="{{ path('trainer_edit', {'uuid': trainer.uuid}) }}">edit</a>
+
+    {{ include('trainer/_delete_form.html.twig') }}
+{% endblock %}

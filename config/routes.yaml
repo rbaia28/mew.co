@@ -1,0 +1,16 @@
+# index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+# user:
+#    path: /
+#    controller: App\Controller\UserController::index
+
+# pokemon:
+#    path: /pokemon
+#    controller: App\Controller\Pokemon\Pokemon::list
+
+# # TODO fix location routes
+# location:
+#    path: /location
+#    controller: App\Controller\Location\Location::list

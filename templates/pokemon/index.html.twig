@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pokemon index{% endblock %}
+
+{% block body %}
+    <h1>Pokemon index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Uuid</th>
+                <th>DexId</th>
+                <th>Nickname</th>
+                <th>IsShiny</th>
+                <th>Cp</th>
+                <th>CurrentLevel</th>
+                <th>LocationId</th>
+                <th>TrainerId</th>
+                <th>IsArchived</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pokemon in pokemon %}
+            <tr>
+                <td>{{ pokemon.id }}</td>
+                <td>{{ pokemon.uuid }}</td>
+                <td>{{ pokemon.dexId }}</td>
+                <td>{{ pokemon.nickname }}</td>
+                <td>{{ pokemon.isShiny ? 'Yes' : 'No' }}</td>
+                <td>{{ pokemon.cp }}</td>
+                <td>{{ pokemon.currentLevel }}</td>
+                <td>{{ pokemon.locationId }}</td>
+                <td>{{ pokemon.trainerId }}</td>
+                <td>{{ pokemon.isArchived ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('pokemon_show', {'id': pokemon.id}) }}">show</a>
+                    <a href="{{ path('pokemon_edit', {'id': pokemon.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('pokemon_new') }}">Create new</a>
+{% endblock %}
